@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color: #302b28;
+    background: #fffdf8;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+    background:
+      radial-gradient(circle at top left, rgba(244, 231, 227, 0.7), transparent 34rem),
+      linear-gradient(180deg, #fffdf8 0%, #fff7ee 100%);
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  img {
+    background: linear-gradient(135deg, rgba(244, 231, 227, 0.8), rgba(255, 253, 248, 0.9));
+  }
+
+  ::selection {
+    background: rgba(198, 161, 91, 0.35);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-0 py-20 md:py-28;
+  }
+
+  .section-title {
+    @apply font-serif text-5xl font-semibold leading-[1.02] text-olive md:text-7xl;
+  }
+
+  .eyebrow {
+    @apply mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-champagne;
+  }
+
+  .gold-button {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 border border-champagne bg-champagne px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ivory shadow-gold transition duration-300 hover:bg-olive hover:text-ivory focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne focus-visible:ring-offset-2 focus-visible:ring-offset-ivory;
+  }
+
+  .outline-button {
+    @apply inline-flex min-h-12 items-center justify-center border border-olive px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-olive transition duration-300 hover:bg-olive hover:text-ivory focus:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-ivory;
+  }
+
+  .icon-text-button {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 border border-champagne/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-olive transition duration-300 hover:border-champagne hover:bg-champagne hover:text-ivory focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne focus-visible:ring-offset-2 focus-visible:ring-offset-ivory;
+  }
+
+  .nav-link {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-charcoal/70 transition duration-300 hover:text-champagne focus:outline-none focus-visible:text-champagne;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne focus-visible:ring-offset-2 focus-visible:ring-offset-ivory;
+  }
+
+  .detail-panel {
+    @apply border border-champagne/25 bg-white/55 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-champagne/60;
+  }
+
+  .timeline-panel {
+    @apply border border-ivory/15 bg-ivory/5 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-champagne/60;
+  }
+
+  .gallery-item {
+    @apply relative overflow-hidden border border-champagne/20 bg-blush text-left shadow-soft transition duration-300 hover:-translate-y-1 hover:border-champagne focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne focus-visible:ring-offset-2 focus-visible:ring-offset-ivory;
+  }
+
+  .music-button {
+    @apply inline-flex min-h-11 items-center gap-2 border border-champagne/50 bg-ivory/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-olive shadow-soft backdrop-blur transition duration-300 hover:bg-champagne hover:text-ivory focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70;
+  }
+
+  .lightbox-close {
+    @apply absolute right-4 top-4 grid h-11 w-11 place-items-center border border-ivory/30 text-ivory transition duration-300 hover:bg-ivory hover:text-charcoal focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne;
+  }
+
+  .lightbox-nav {
+    @apply absolute top-1/2 hidden h-12 w-12 -translate-y-1/2 place-items-center border border-ivory/30 text-ivory transition duration-300 hover:bg-ivory hover:text-charcoal focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne sm:grid;
+  }
+}
+
+@layer utilities {
+  .floral-mist {
+    background:
+      radial-gradient(circle at 18% 18%, rgba(198, 161, 91, 0.16), transparent 13rem),
+      radial-gradient(circle at 82% 76%, rgba(244, 231, 227, 0.95), transparent 16rem),
+      linear-gradient(135deg, rgba(255, 253, 248, 0.95), rgba(244, 231, 227, 0.55));
+  }
+
+  .floral-corner {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    opacity: 0.22;
+    background:
+      radial-gradient(ellipse at 58% 42%, transparent 0 18%, #c6a15b 19% 20%, transparent 21%),
+      radial-gradient(ellipse at 42% 54%, transparent 0 16%, #354638 17% 18%, transparent 19%),
+      radial-gradient(circle at 48% 48%, #f4e7e3 0 10%, transparent 11%);
+  }
+
+  .envelope-body {
+    position: absolute;
+    inset: 86px 0 0;
+    border: 1px solid rgba(198, 161, 91, 0.55);
+    background:
+      linear-gradient(35deg, transparent 49%, rgba(198, 161, 91, 0.35) 50%, transparent 51%),
+      linear-gradient(-35deg, transparent 49%, rgba(198, 161, 91, 0.35) 50%, transparent 51%),
+      #fffdf8;
+    box-shadow: 0 22px 70px rgba(48, 43, 40, 0.16);
+  }
+
+  .envelope-flap {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 8px;
+    height: 150px;
+    transform-origin: bottom center;
+    border-left: 224px solid transparent;
+    border-right: 224px solid transparent;
+    border-bottom: 150px solid #f4e7e3;
+    filter: drop-shadow(0 12px 24px rgba(48, 43, 40, 0.1));
+  }
+
+  .invitation-card {
+    position: absolute;
+    z-index: 1;
+    left: 52px;
+    right: 52px;
+    top: 66px;
+    display: grid;
+    min-height: 142px;
+    place-items: center;
+    border: 1px solid rgba(198, 161, 91, 0.55);
+    background: #fffdf8;
+    box-shadow: 0 20px 50px rgba(48, 43, 40, 0.12);
+  }
+
+  .wax-seal {
+    position: absolute;
+    left: 50%;
+    top: 54px;
+    z-index: 3;
+    display: grid;
+    width: 72px;
+    height: 72px;
+    transform: translateX(-50%);
+    place-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 253, 248, 0.58);
+    background: #c6a15b;
+    color: #fffdf8;
+    font-family: Cormorant Garamond, Georgia, serif;
+    font-size: 1.2rem;
+    box-shadow: 0 12px 30px rgba(198, 161, 91, 0.38);
+  }
+}
+
+@media (max-width: 520px) {
+  .envelope-flap {
+    border-left-width: calc((100vw - 40px) / 2);
+    border-right-width: calc((100vw - 40px) / 2);
+  }
+
+  .invitation-card {
+    left: 32px;
+    right: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
