@@ -20,9 +20,9 @@ export type GalleryImage = {
 
 export const weddingDetails = {
   couple: {
-    partnerOne: 'Partner One',
-    partnerTwo: 'Partner Two',
-    displayNames: 'Partner One & Partner Two',
+    partnerOne: 'Prameesha',
+    partnerTwo: 'Pathum',
+    displayNames: 'Prameesha & Pathum',
     initials: 'P & P',
   },
   weddingDate: '2027-06-20T16:30:00+05:30',
