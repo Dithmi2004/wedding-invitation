@@ -28,7 +28,7 @@ export const EnvelopeIntro = ({ isOpen, onOpen }: EnvelopeIntroProps) => {
         <div className="relative mx-auto mt-8 h-72 max-w-md">
           <motion.div
             className="envelope-flap"
-            animate={isOpen && !reduceMotion ? { rotateX: 180, y: -24 } : { rotateX: 0, y: 0 }}
+            animate={isOpen && !reduceMotion ? { opacity: 0, y: -24 } : { opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeInOut' }}
           />
           <motion.div
